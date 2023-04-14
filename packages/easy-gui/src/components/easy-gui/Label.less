@@ -1,0 +1,24 @@
+.label {
+  user-select: none;
+  flex: 1;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.icon {
+  cursor: pointer;
+  &:hover {
+    color: var(--easyv-primary-color);
+  }
+}
+.eventMark::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: 2px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: var(--easyv-primary-color);
+}

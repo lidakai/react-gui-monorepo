@@ -1,0 +1,113 @@
+.uploadBox {
+  height: 115px;
+  position: relative;
+  border-radius: 2px;
+  background: #181b24;
+  border: 1px solid #181b24;
+  transition: border 0.3s;
+  &:hover {
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .center {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  :global {
+    .icon-download {
+      display: none;
+      position: absolute;
+      right: 36px;
+      top: 10px;
+      z-index: 10;
+      font-size: 16px;
+      width: 16px;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0 4px;
+    }
+    .icon-btn_delete {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      font-size: 16px;
+      width: 16px;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0 4px;
+    }
+    .easyv-gui-upload.easyv-gui-upload-drag {
+      position: relative;
+      display: block;
+      background: #181b24;
+      cursor: pointer;
+      color: #fff;
+      text-align: center;
+      margin: 0 auto;
+      overflow: hidden;
+      background-size: contain;
+      border-style: solid;
+      .easyv-gui-upload {
+        padding: 0;
+        color: var(--easyv-text-color);
+      }
+      .uploader-trigger {
+        display: inline;
+        vertical-align: middle;
+        font-size: 12px;
+        color: #d8d8d8;
+      }
+    }
+  }
+
+  .uploadFile {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  .uploadChange {
+    border-color: var(--easyv-primary-color);
+    color: var(--easyv-primary-color);
+    width: 80px;
+    margin-top: 8px;
+  }
+  &:hover {
+    color: var(--easyv-primary-color);
+    border-color: var(--easyv-primary-color) !important;
+    :global {
+      .icon-btn_delete,
+      .icon-download {
+        display: block;
+        &:hover {
+          color: var(--easyv-primary-color);
+        }
+      }
+    }
+    .uploadFile {
+      display: block;
+    }
+  }
+}
+
+.radio {
+  text-align: right;
+  :global {
+    .easyv-gui-radio-wrapper {
+      margin-right: 0;
+    }
+  }
+}

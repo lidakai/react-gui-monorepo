@@ -1,0 +1,15 @@
+.eventMark{
+   position: relative;
+}
+.eventMark::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: -8px;
+    width: 4px;
+    top: 50%;
+    height: 4px;
+    margin-top: -2px;
+    border-radius: 50%;
+    background-color: var(--easyv-primary-color);
+  }

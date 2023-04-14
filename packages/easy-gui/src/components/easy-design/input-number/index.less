@@ -1,0 +1,100 @@
+.inputNumber {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--easyv-border-color-base);
+  border-radius: 2px;
+  background-color: var(--easyv-background-gray-1);
+  cursor: pointer;
+  &:hover,
+  &.focus {
+    border-color: var(--easyv-primary-color);
+  }
+  &.disabled {
+    &:hover {
+      border-color: var(--easyv-border-color-base);
+    }
+  }
+
+  .prefix,
+  .suffix {
+    padding-left: 6px;
+    color: var(--easyv-text-disabled);
+    line-height: 26px;
+  }
+
+  .suffix {
+    padding-right: 6px;
+    &:hover {
+      cursor: ew-resize;
+    }
+  }
+  .disabled {
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  .step {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    width: 22px;
+    border-left: 1px solid var(--easyv-border-color-base);
+    .up,
+    .down {
+      position: relative;
+      flex: 1;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      text-align: center;
+      transition: all 0.1s linear;
+      font-size: 7px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        flex: 1.5;
+        color: var(--easyv-primary-color);
+      }
+      &.disabled {
+        cursor: not-allowed;
+        color: var(--easyv-text-disabled);
+      }
+    }
+    .down {
+      border-top: 1px solid var(--easyv-border-color-base);
+    }
+  }
+
+  &:global {
+    & > .easyv-gui-input-number {
+      border: none;
+      box-shadow: none;
+
+      .easyv-gui-input-number-input {
+        padding: 0 0 0 7px;
+      }
+      .easyv-gui-input-number-handler-wrap {
+        display: none;
+      }
+    }
+  }
+}
+
+.label {
+  text-align: center;
+  line-height: 1;
+  margin-top: 4px;
+  user-select: none;
+  color: var(--easyv-text-disabled);
+  &:hover {
+    cursor: ew-resize;
+  }
+  &.disabled {
+    &:hover {
+      cursor: unset;
+    }
+  }
+}

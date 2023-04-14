@@ -1,0 +1,43 @@
+.sliderContainer {
+  display: flex;
+}
+
+.sliderWrap {
+  position: relative;
+  flex: 1;
+}
+
+.sliderNumber {
+  width: 64px;
+  margin-left: 8px;
+}
+
+.value {
+  position: absolute;
+  left: 50%;
+  color: #999;
+  transform: translate(-50%, -50%);
+  top: 6px;
+}
+
+.range {
+  &:global(.easyv-gui-slider) {
+    margin: 16px 6px 0px 0px;
+  }
+}
+
+.handle1 {
+  :global {
+    .easyv-gui-slider-handle-1 {
+      box-shadow: 0 0 0 3px rgba(36, 145, 247, 0.5);
+    }
+  }
+}
+
+.handle2 {
+  :global {
+    .easyv-gui-slider-handle-2 {
+      box-shadow: 0 0 0 3px rgba(36, 145, 247, 0.5);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.tabs {
+  background-color: var(--easyv-background-gray-2);
+  &:global {
+    &.easyv-gui-tabs-card {
+      & > .easyv-gui-tabs-nav {
+        &::before {
+          border-bottom: none;
+        }
+
+        .easyv-gui-tabs-nav-list {
+          flex: 1;
+        }
+
+        .easyv-gui-tabs-tab {
+          border: none;
+          flex: 1;
+          justify-content: center;
+          &.easyv-gui-tabs-tab-active {
+            background-color: var(--easyv-background-gray-2);
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              width: 100%;
+              border-top: 2px solid var(--easyv-primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

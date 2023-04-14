@@ -1,0 +1,139 @@
+.select {
+  &:global(.easyv-gui-select) {
+    width: 100%;
+  }
+  &:global(.easyv-gui-select-focused:not(.easyv-gui-select-disabled).easyv-gui-select:not(.easyv-gui-select-customize-input)
+      .easyv-gui-select-selector) {
+    border-color: var(--easyv-primary-color);
+  }
+  .card {
+    display: none;
+  }
+  .label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+  }
+}
+
+.dropdown {
+  &:global(.easyv-gui-select-dropdown) {
+    & > div:first-child > div:nth-child(2) {
+      // 滚动条
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        display: block;
+      }
+      // 滚动条滑块
+      &::-webkit-scrollbar-thumb {
+        background: #373b44;
+        border-radius: 4px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+      // 滚动条轨道
+      &::-webkit-scrollbar-track {
+        background: #26292f;
+      }
+    }
+    :global {
+      .easyv-gui-select-item-option-selected {
+        color: var(--easyv-primary-color);
+      }
+    }
+  }
+}
+.cardImage {
+  height: 100%;
+  :global {
+    .easyv-gui-image-img {
+      object-fit: scale-down;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .icon {
+    color: var(--easyv-text-color);
+    animation: turn 1s linear infinite;
+  }
+  @keyframes turn {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    25% {
+      -webkit-transform: rotate(90deg);
+    }
+    50% {
+      -webkit-transform: rotate(180deg);
+    }
+    75% {
+      -webkit-transform: rotate(270deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+}
+// optionCard
+.option {
+  width: 50%;
+  padding: 4px;
+  .cardBox {
+    text-align: center;
+    .card {
+      background-color: #26292f;
+      border: 1px solid transparent;
+      transition: border 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 24px;
+      font-size: 12px;
+      color: var(--easyv-text-color);
+      display: block;
+      transition: color 0.3s;
+    }
+  }
+}
+.cardSelect {
+  :global {
+    .rc-virtual-list-holder-inner {
+      padding: 4px;
+      flex-wrap: wrap;
+      flex-direction: inherit !important;
+    }
+    .easyv-gui-select-item {
+      background-color: transparent;
+    }
+    .easyv-gui-select-item-option-active:not(.easyv-gui-select-item-option-disabled),
+    .easyv-gui-select-item-option-selected:not(.easyv-gui-select-item-option-disabled) {
+      .card {
+        border: 1px solid rgba(36, 145, 247, 1);
+      }
+      .label {
+        color: rgba(36, 145, 247, 1);
+      }
+    }
+    .easyv-gui-select-item-option-disabled {
+      .label {
+        color: #666;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.radio {
+  &:global {
+    &.easyv-gui-radio-group {
+      display: flex;
+      .easyv-gui-radio-button-wrapper {
+        flex: 1;
+        text-align: center;
+      }
+    }
+  }
+
+  :global {
+    .easyv-gui-radio-wrapper {
+      line-height: 28px;
+    }
+    .easyv-gui-radio-input:focus + .easyv-gui-radio-inner {
+      box-shadow: none;
+    }
+    .easyv-gui-radio-inner {
+      width: 14px;
+      height: 14px;
+      background: none;
+    }
+    .easyv-gui-radio-button-wrapper-checked:not(.easyv-gui-radio-button-wrapper-disabled):focus-within {
+      box-shadow: none;
+    }
+    .easyv-gui-radio-wrapper-checked {
+      color: #fff;
+    }
+
+    // 设置禁用状态样式
+    .easyv-gui-radio-disabled {
+      border-radius: 14px;
+      opacity: 0.5;
+    }
+
+    .easyv-gui-radio-wrapper:hover .easyv-gui-radio-disabled {
+      border-color: #5a5e67;
+    }
+
+    .easyv-gui-radio.easyv-gui-radio-disabled .easyv-gui-radio-inner {
+      border-color: #5a5e67;
+    }
+    .easyv-gui-radio-disabled + span {
+      color: #b4b7c1;
+    }
+    .easyv-gui-radio-disabled .easyv-gui-radio-inner::after {
+      background: #3a89fe;
+    }
+    .easyv-gui-radio.easyv-gui-radio-checked.easyv-gui-radio-disabled .easyv-gui-radio-inner {
+      border-color: #3a89fe;
+    }
+
+    .easyv-gui-radio-inner::after {
+      width: 10px;
+      height: 10px;
+      margin-top: -5px;
+      margin-left: -5px;
+      border-radius: 10px;
+    }
+  }
+}

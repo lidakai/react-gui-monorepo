@@ -1,0 +1,42 @@
+.aceEditorBox {
+  position: relative;
+  width: 100%;
+}
+.fullScreen {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  &:hover {
+    color: #fff;
+  }
+}
+.modal {
+  border-radius: 6px;
+  overflow: hidden;
+  :global(.easyv-gui-modal-header) {
+    background-color: #2d2f38;
+    text-align: center;
+    color: #fff;
+    border-bottom: 0;
+  }
+  :global(.easyv-gui-modal-title) {
+    color: #fff;
+  }
+  :global(.easyv-gui-modal-close) {
+    color: #fff;
+    &:hover {
+      color: var(--easyv-primary-color);
+    }
+  }
+  :global(.easyv-gui-modal-body) {
+    padding: 0 12px 12px 12px;
+  }
+}
+.aceContent {
+  background-color: #111318;
+}

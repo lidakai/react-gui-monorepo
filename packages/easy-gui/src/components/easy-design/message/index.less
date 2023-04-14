@@ -1,0 +1,64 @@
+.msg {
+    color: #ffffff;
+  
+    i {
+      margin-right: 9px;
+    }
+  
+    :global {
+      .easyv-gui-message-notice-content {
+        background-color: #3d404c;
+        box-shadow: 0px 2px 24px rgba(74, 94, 85, 0.08);
+        border-radius: 2px;
+      }
+  
+      .easyv-gui-message-custom-content {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  
+  .success {
+    .msg();
+  
+    i {
+      color: #23b16f;
+    }
+  }
+  
+  .error {
+    .msg();
+  
+    i {
+      color: #eb515a;
+    }
+  }
+  
+  .loading {
+    .msg();
+  
+    i {
+      color: #3a89fe;
+      animation: rotateAnimation 1.5s infinite;
+    }
+  
+    @keyframes rotateAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+  
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  
+  .warning {
+    .msg();
+  
+    i {
+      color: #e79e31;
+    }
+  }
+  

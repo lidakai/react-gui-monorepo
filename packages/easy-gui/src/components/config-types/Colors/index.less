@@ -1,0 +1,29 @@
+.wrap {
+  display: flex;
+
+  .preview {
+    width: 15px;
+    height: 62px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+
+  .colors {
+    flex: 1;
+    & > div:first-child {
+      margin-bottom: 5px !important;
+    }
+  }
+}
+
+.direction {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  & > span {
+    margin-right: 12px;
+  }
+  & > div {
+    flex: 1;
+  }
+}

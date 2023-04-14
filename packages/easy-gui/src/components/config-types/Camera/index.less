@@ -1,0 +1,29 @@
+.camera {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  background: #181b24;
+  border: 1px solid #393b4a;
+  border-radius: 2px;
+  border-radius: 2px;
+  &.active {
+    border-color: var(--easyv-primary-color);
+  }
+
+  .name {
+    cursor: pointer;
+    flex: 1;
+    color: var(--easyv-text-color);
+  }
+
+  .operate {
+    & > a {
+      color: var(--easyv-primary-color);
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.switch {
+  &:global {
+    &.easyv-gui-switch {
+      background-color: var(--easyv-switch-background);
+    }
+
+    &.easyv-gui-switch-checked {
+      background-color: var(--easyv-primary-color);
+    }
+
+    &.easyv-gui-switch-checked:focus {
+      box-shadow: none;
+    }
+
+    &.easyv-gui-switch:not(.easyv-gui-switch-checked) {
+      background: #5a5d69;
+    }
+  }
+}

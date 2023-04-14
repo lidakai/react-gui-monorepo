@@ -1,0 +1,47 @@
+.menu {
+  position: fixed;
+  z-index: 1;
+}
+.menuBox {
+  width: 144px;
+  background: #232630;
+  border: 1px solid #0d0e10;
+  /* shadow-small */
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.18);
+  padding: 4px 0;
+  ul {
+    display: block;
+    margin: 0;
+    li:not(.line) {
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      height: 24px;
+      line-height: 24px;
+      width: 100%;
+      color: rgba(180, 183, 193, 1);
+      font-size: 12px;
+      cursor: pointer;
+      transition: color 0.3s;
+      &:hover {
+        color: #fff;
+        background-color: rgba(58, 137, 254, 1);
+      }
+    }
+  }
+}
+
+.line {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.12);
+  margin: 4px 0;
+}
+.icon {
+  display: flex;
+  margin-right: 4px;
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+

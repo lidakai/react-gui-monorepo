@@ -1,0 +1,62 @@
+{
+  "name": "easy-gui",
+  "version": "0.1.0",
+  "jsnext:source": "./src/index.ts",
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/es/index.js",
+  "scripts": {
+    "prepare": "modern build",
+    "dev": "modern dev",
+    "build": "modern build",
+    "build:watch": "modern build -w",
+    "new": "modern new",
+    "upgrade": "modern upgrade"
+  },
+  "dependencies": {
+    "@easyv/antd": "4.21.6",
+    "@easyv/react-icons": "^1.97.0",
+    "@easyv/sync-to-mirror": "0.0.1",
+    "ace-builds": "npm:@easyv/ace-builds@1.0.3",
+    "ahooks": "^2.9.2",
+    "classnames": "^2.2.6",
+    "d3": "^5.16.0",
+    "easy-utils": "workspace:*",
+    "jszip": "^3.5.0",
+    "lodash": "^4.17.19",
+    "p-limit": "npm:@easyv/p-limit@4.0.4",
+    "rc-color-picker": "^1.2.6",
+    "react-ace": "npm:@easyv/react-ace@1.0.2",
+    "react-color": "^2.18.1",
+    "react-dnd": "16.0.1",
+    "react-dnd-html5-backend": "16.0.1",
+    "react-draggable": "^4.4.2",
+    "react-sortable-hoc": "^1.11.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@modern-js-app/eslint-config": "2.13.2",
+    "@modern-js/eslint-config": "2.13.2",
+    "@modern-js/module-tools": "2.13.2",
+    "@modern-js/plugin-module-import": "^2.13.2",
+    "@modern-js/tsconfig": "2.13.2",
+    "@types/jest": "~29.2.4",
+    "@types/node": "~16.11.7",
+    "@types/react": "~18.0.26",
+    "husky": "~8.0.1",
+    "less": "^3.12.2",
+    "less-loader": "^5.0.0",
+    "lint-staged": "~13.1.0",
+    "prettier": "~2.8.1",
+    "rimraf": "~3.0.2",
+    "typescript": "~4.9.4"
+  },
+  "sideEffects": [],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,0 +1,54 @@
+.container {
+  flex: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .edit {
+      display: block;
+    }
+  }
+
+  .name {
+    flex: 1;
+    height: 100%;
+    .text {
+      display: inline-block;
+      cursor: pointer;
+      overflow: hidden;
+      max-width: 200px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .name:not(.hide){
+        &:hover {
+      color: #fff;
+    }
+  }
+
+  .edit {
+    display: none;
+    cursor: pointer;
+
+    // margin-right: 6px;
+    & > span {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .edit:not(.hide){
+    color: #bfbfbf;
+    &:hover {
+  color: #fff;
+}
+}
+}

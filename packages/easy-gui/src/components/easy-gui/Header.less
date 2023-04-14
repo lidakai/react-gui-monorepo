@@ -1,0 +1,28 @@
+.between {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.show {
+  cursor: pointer;
+  position: relative;
+  color: var(--easyv-text-color);
+  &:hover {
+    color: var(--easyv-text-active);
+  }
+}
+
+.eventMark::before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: -8px;
+  width: 4px;
+  top:50%;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 50%;
+  background-color: var(--easyv-primary-color);
+}

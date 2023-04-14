@@ -1,0 +1,32 @@
+.list {
+  padding: 0 16px 16px 16px;
+}
+
+.item {
+  list-style: none;
+  margin: 0;
+  padding-left: 8px;
+  &.active {
+    .title {
+      color: var(--easyv-primary-color);
+    }
+  }
+  .title {
+    color: var(--easyv-text-color);
+    padding: 12px 12px 6px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--easyv-border-color-base);
+    &:hover {
+      color: var(--easyv-primary-color);
+    }
+  }
+
+  .content {
+    padding-top: 12px;
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
